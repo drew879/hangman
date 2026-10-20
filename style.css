@@ -1,1 +1,94 @@
 :root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#262637;background:#f6f5f1;font-synthesis:none;--purple:#6b50bc;--muted:#85838c;--line:#e8e5df;--green:#318375;--red:#bc7265}*{box-sizing:border-box}body{margin:0}button,input,textarea,select{font:inherit}button,a,input,textarea,select{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #a18bd3;outline-offset:4px}button{touch-action:manipulation}button:disabled{cursor:default}button.primary:active{transform:scale(.985)}.app{max-width:520px;margin:auto;padding:0 24px;padding-top:env(safe-area-inset-top);min-height:100svh;display:flex;flex-direction:column}header{height:88px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:27px;letter-spacing:-1.5px;font-weight:800;text-decoration:none;color:#292737}.brand span{color:var(--purple);font-size:31px;margin-left:3px}.icon-button{position:relative;border:1px solid var(--line);border-radius:50%;width:42px;height:42px;background:#fff9;color:var(--purple);font-size:24px}.slash{position:absolute;inset:3px;font-size:30px;text-shadow:2px 0 #f6f5f1}main{flex:1}footer{font-size:9px;letter-spacing:1.6px;text-align:center;color:#9a969f;padding:28px 0 max(22px,env(safe-area-inset-bottom));line-height:1.8}h1{font-size:40px;line-height:1.12;letter-spacing:-1.7px;margin:18px 0 14px;font-weight:750;overflow-wrap:anywhere}h2{font-size:21px;letter-spacing:-.6px}.intro{font-size:15px;line-height:1.7;color:#787580;margin:0 0 25px}.welcome{text-align:center}.pill{font-size:10px;letter-spacing:1.3px;font-weight:700;border:1px solid #ded7ed;border-radius:30px;padding:9px 13px;color:var(--purple);display:inline-block;background:#ede8f559}.hero-art{height:218px;position:relative;margin:7px 0 0}.hero-art .hangman{height:210px;width:285px}.hero-art .gallows,.hero-art .rope{opacity:0}.art-badge{position:absolute;top:76px;left:calc(50% - 130px);background:#e8eddf;color:#60734a;transform:rotate(-10deg);font-size:13px;border-radius:8px;padding:10px 13px;font-weight:600}.hero-art+h1{margin-top:0}.card{background:#fffdfb;border:1px solid var(--line);border-radius:22px;padding:24px;text-align:left;box-shadow:0 7px 22px #3b314003}.eyebrow{display:block;font-size:10px;font-weight:750;letter-spacing:1.9px;color:var(--purple);margin-bottom:22px}label{font-size:13px;font-weight:650;display:flex;align-items:center;justify-content:space-between;margin:20px 0 10px;gap:10px}label span{font-size:10px;color:var(--muted);font-weight:400}input,textarea,select{display:block;width:100%;border:1px solid #e6e2dc;background:#f7f6f3;border-radius:11px;padding:14px;font-size:16px;color:#292737;outline:none;transition:border-color .2s;min-width:0}input:focus,textarea:focus,select:focus{border-color:#9a82cc;box-shadow:0 0 0 3px #6b50bc0c}input::placeholder,textarea::placeholder{color:#aaa6ae}textarea{resize:vertical;min-height:104px;line-height:1.5}.primary,.secondary{border:0;border-radius:13px;padding:17px 18px;font-size:14px;font-weight:650;transition:transform .15s}.primary{background:var(--purple);color:white;box-shadow:0 4px 10px #6b50bc15}.primary span{font-size:20px;line-height:16px;margin-left:8px}.full{width:100%;display:flex;align-items:center;justify-content:space-between}.fine-print{font-size:11px;color:#94909b;line-height:1.8;margin:20px 0 0}.error{font-size:12px;color:#ac5143;line-height:1.5}.error:empty{margin:20px 0 0}.scoreboard{display:flex;border:1px solid var(--line);border-radius:17px;background:#fffdfb;overflow:hidden;margin:6px 0 28px}.player{width:50%;display:flex;align-items:center;padding:15px 12px;gap:9px}.player+.player{border-left:1px solid var(--line)}.avatar{display:grid;place-items:center;background:#eee9f6;color:var(--purple);width:31px;height:31px;border-radius:50%;font-size:12px;font-weight:650;flex-shrink:0}.player-name{font-size:12px;font-weight:650;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.player-name small{display:block;font-size:8px;letter-spacing:1px;color:#97929f;margin-top:5px}.player strong{margin-left:auto;font-size:22px;font-weight:550}.player.active .avatar{background:#e6eee7;color:#58826b}.round-label{font-size:10px;letter-spacing:1.4px;color:#928d9a;font-weight:650}.round-label span{color:#b4a6cd;margin:0 8px}.setup h1{margin-top:22px}.setup .card{margin-top:26px}.card label:first-child{margin-top:0}.hint{font-size:10px;color:#98929d;margin:8px 0 24px;line-height:1.6}.setup{text-align:left}.setup>.fine-print{text-align:center}.text-button{display:block;border:0;background:none;color:#98929e;text-decoration:underline;text-underline-offset:4px;font-size:11px;margin:24px auto 0;padding:7px}.handoff{text-align:center;padding-top:17px}.handoff-icon{width:92px;height:92px;margin:0 auto 28px;background:#eae4f5;border-radius:29px;color:var(--purple);font-size:57px;line-height:88px;transform:rotate(-8deg)}.handoff .eyebrow{margin-bottom:18px}.handoff .rules{margin:30px 0 26px}.rules h2{margin-top:0}.rules p{color:#817a8c;font-size:13px;margin:19px 0 0;line-height:1.5}.rules p span{font-size:10px;color:var(--purple);font-weight:700;margin-right:12px}.game-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:19px}.category{text-transform:uppercase;font-size:9px;letter-spacing:1px;max-width:70%;overflow-wrap:anywhere}.chances{font-size:11px;color:#96909e;white-space:nowrap}.chances.urgent{color:var(--red)}.drawing-area{position:relative;text-align:center}.hangman{width:100%;height:222px;overflow:visible}.gallows{fill:none;stroke:#c1bcb3;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.rope{fill:none;stroke:#c1bcb3;stroke-width:3;stroke-linecap:round}.character{fill:none;stroke:#76609e;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.character .face{stroke-width:2.5}.progress-dots{display:flex;justify-content:center;gap:6px;margin-top:0}.progress-dots i{width:5px;height:5px;background:#ddd7e6;border-radius:50%}.progress-dots i.used{background:#bc8c81}.puzzle{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;column-gap:17px;row-gap:16px;margin:30px 0 24px}.word{display:inline-flex;gap:4px;max-width:100%;flex-wrap:wrap;justify-content:center}.tile{display:inline-flex;align-items:center;justify-content:center;border-bottom:2px solid #c7bdde;width:clamp(10px,4.7vw,23px);height:30px;font-size:clamp(13px,4.4vw,22px);font-weight:600;color:#564575}.tile.punctuation{border:0;width:auto;min-width:6px}.tile.revealed{color:var(--red);border-color:#ddc3bb}.feedback{font-size:12px;color:#8c8596;text-align:center;min-height:18px;margin:0 0 22px}.keyboard{margin-left:-14px;margin-right:-14px}.key-row{display:flex;justify-content:center;gap:5px;margin-bottom:7px}.key{position:relative;min-width:0;flex:0 1 41px;height:48px;border:1px solid #e4dfd9;border-bottom:3px solid #ddd7d2;background:#fffdfb;border-radius:9px;color:#4d455c;font-size:15px;font-weight:600;padding:0}.key:active:not(:disabled){background:#e9e1f4}.key.correct{background:#e0ece3;color:#507b5f;border-color:#d8e5da}.key.wrong{background:#eeeae5;border-color:#e7e2dc;color:#b1a9a4;text-decoration:line-through}.key small{position:absolute;bottom:1px;left:0;right:0;font-size:9px}.result{text-align:center;margin:23px 0}.result .eyebrow{margin-bottom:10px;color:var(--red)}.result.win .eyebrow{color:var(--green)}.result h1{font-size:28px;letter-spacing:-1px;line-height:1.2;margin:10px 0}.result p{font-size:12px;color:#8c8596;line-height:1.6}.celebrate .character{stroke:#6c5697}.storage-note{font-size:12px;color:#a25b40;text-align:center;line-height:1.5}dialog{border:1px solid var(--line);border-radius:24px;padding:28px;width:min(90%,400px);color:#292737;background:#fffdfb}dialog::backdrop{background:#28203666;backdrop-filter:blur(5px)}dialog p{font-size:14px;line-height:1.6;color:#89808f}.actions{display:flex;gap:10px;margin-top:24px}.actions button{flex:1;padding:14px 10px}.secondary{background:#eee9f4;color:var(--purple)}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}[hidden]{display:none!important}@media(min-width:700px){.app{padding-top:20px}header{height:85px}body{background:radial-gradient(ellipse at 50% 20%,#fdfbf7,#f3f1ec)}}@media(max-width:375px){.app{padding-left:18px;padding-right:18px}h1{font-size:35px}.card{padding:20px}.player{padding:12px 9px;gap:6px}.avatar{width:26px;height:26px}.hangman{height:195px}.keyboard{margin-left:-10px;margin-right:-10px}.key-row{gap:4px}.key{height:46px;font-size:13px}.player-name{font-size:11px}.player strong{font-size:19px}}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* Leave room for mobile browser bars without shrinking the letter keys.
+   svh stays stable as the bars appear; longer puzzles can still scroll. */
+@media (max-width: 600px) {
+  .app:has(.game, .handoff) header {
+    height: 64px;
+    flex-shrink: 0;
+  }
+
+  .app:has(.game, .handoff) .scoreboard {
+    margin: 4px 0 12px;
+  }
+
+  .app:has(.game, .handoff) .player {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .app:has(.game, .handoff) .text-button {
+    margin-top: 8px;
+  }
+
+  .app:has(.game, .handoff) footer {
+    padding: 12px 0 max(12px, env(safe-area-inset-bottom));
+  }
+
+  .game-top {
+    margin-top: 12px;
+  }
+
+  .game .hangman {
+    display: block;
+    height: clamp(132px, calc(100svh - 584px), 184px);
+  }
+
+  .game .puzzle {
+    row-gap: 10px;
+    margin: 14px 0 12px;
+  }
+
+  .game .feedback {
+    margin-bottom: 10px;
+  }
+
+  .game .key-row {
+    margin-bottom: 6px;
+  }
+
+  .game .key-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .handoff {
+    padding-top: 8px;
+  }
+
+  .handoff-icon {
+    --icon-size: clamp(52px, calc(100svh - 692px), 72px);
+    width: var(--icon-size);
+    height: var(--icon-size);
+    line-height: var(--icon-size);
+    font-size: 44px;
+    border-radius: 22px;
+    margin-bottom: 16px;
+  }
+
+  .handoff .eyebrow {
+    margin-bottom: 16px;
+  }
+
+  .handoff h1 {
+    font-size: 36px;
+    margin: 14px 0 12px;
+  }
+
+  .handoff .intro {
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  .handoff .rules {
+    padding: 20px;
+    margin: 20px 0 18px;
+  }
+
+  .handoff .rules h2 {
+    margin-bottom: 14px;
+  }
+
+  .handoff .rules p {
+    margin-top: 12px;
+  }
+}
