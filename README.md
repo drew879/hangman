@@ -20,8 +20,6 @@ Run tests with `npm test` (Node.js 22 or newer). No installation needed.
 
 Push these files to the `main` branch of `drew879/hangman`. In repository **Settings → Pages → Build and deployment**, choose **GitHub Actions**. The included workflow tests the game and deploys just the five application files. All paths are relative for the `/hangman/` project URL.
 
-The remote repository currently advertises no branches. Publishing from this workspace is blocked by invalid GitHub credentials.
-
 ## Verification
 
 Automated tests cover scoring, the six-miss limit, repeated guesses, role assignment, multiword/accent handling, answer validation, and saved-state round trips. Chromium mobile checks passed for winning and losing scores, role swaps, custom categories, refresh recovery, handoff privacy, session reset, and layouts at 320, 375, and 440 pixels wide, with no browser errors. The optional `qa/browser_check.py` runner requires Python Playwright and Chromium. Actual iPhone testing and audible sound verification remain to be done.
