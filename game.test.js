@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { newSession, guess, outcome, wrongLetters, validateAnswer, validSave } from './game.js';
+const playing = answer => ({ ...newSession(['Drew','Sam']), answer, category:'Other', phase:'play' });
+test('a solve awards only the guesser, once',()=>{ let s=playing('A'); s=guess(s,'a'); assert.equal(s.phase,'result');assert.equal(s.result,'won');assert.deepEqual(s.scores,[0,1]);assert.equal(guess(s,'A'),s); });
+test('six wrong letters ends the round with no points',()=>{let s=playing('Z');for(const c of 'ABCDEF')s=guess(s,c);assert.equal(s.result,'lost');assert.deepEqual(s.scores,[0,0]);assert.equal(wrongLetters(s).length,6);assert.equal(guess(s,'G'),s);});
+test('duplicate and invalid inputs do not consume chances',()=>{let s=guess(playing('DOG'),'X');assert.equal(guess(s,'x'),s);assert.equal(guess(s,'!'),s);assert.equal(wrongLetters(s).length,1);});
+test('multiword answers, accents and punctuation reveal correctly',()=>{let s=playing('Café, 2!');for(const c of 'CAFE')s=guess(s,c);assert.equal(s.result,'won');assert.equal(wrongLetters(s).length,0);});
+test('setter two awards player one',()=>{let s={...playing('A'),setter:1};s=guess(s,'A');assert.deepEqual(s.scores,[1,0]);});
+test('handoff cannot accept guesses',()=>{const s={...playing('A'),phase:'handoff'};assert.equal(guess(s,'A'),s);});
+test('validation protects layout and requires guessable letters',()=>{assert.ok(validateAnswer('123!?'));assert.ok(validateAnswer('a'.repeat(25)));assert.ok(validateAnswer('cat '.repeat(36)));assert.ok(validateAnswer('東京'));assert.equal(validateAnswer('A good movie: Amélie!'),'');});
+test('session survives serialization during and after a round',()=>{let s=guess(playing('AB'),'A');s=JSON.parse(JSON.stringify(s));assert.ok(validSave(s));s=guess(s,'B');assert.ok(validSave(JSON.parse(JSON.stringify(s))));assert.equal(s.scores[1],1);});
+test('malformed saved state is rejected',()=>{assert.equal(validSave(null),false);assert.equal(validSave({version:1}),false);assert.equal(validSave({...playing('A'),guesses:['xx']}),false);assert.equal(validSave({...playing('A'),scores:[0,-1]}),false);});
